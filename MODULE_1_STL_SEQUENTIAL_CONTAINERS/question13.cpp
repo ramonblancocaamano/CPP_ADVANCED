@@ -1,5 +1,7 @@
-#include <iostream>
 #include <list>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -18,6 +20,7 @@ class A {
 
    public:
     A(int a) : a(a) {}
+    A(const A &a) {}
 };
 
 ostream &operator<<(ostream &c, const A &o) {
@@ -27,15 +30,16 @@ ostream &operator<<(ostream &c, const A &o) {
 
 int main() {
     int tab[] = {1, 2, 3, 4, 5, 6, 7, 8, 8, 10};
-    list<int> l1(tab, tab + 10);
-    list<int> l2;
-    list<int>::iterator it;
+    list<A> l1(tab, tab + 10);
+    deque<A> d1;
+    list<A>::iterator it;
 
     for (it = l1.begin(); it != l1.end(); ++it) {
-        l2.push_front(it);
+        d1.insert(d1.begin(), it[0]);
     }
 
-    print(l2.begin(), l2.end()) << endl;
+    print(d1.begin(), d1.end()) << endl;
 
     return 0;
 }
+

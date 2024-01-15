@@ -12,30 +12,17 @@ ostream &print(T const &start, T const &end) {
     return cout;
 }
 
-class A {
-   public:
-    int a;
-
-   public:
-    A(int a) : a(a) {}
-};
-
-ostream &operator<<(ostream &c, const A &o) {
-    c << o.a;
-    return c;
-}
-
 int main() {
     int tab[] = {1, 2, 3, 4, 5, 6, 7, 8, 8, 10};
     list<int> l1(tab, tab + 10);
     list<int> l2;
-    list<int>::iterator it;
 
-    for (it = l1.begin(); it != l1.end(); ++it) {
-        l2.push_front(it);
+    while (!l1.empty()) {
+        l2.insert(l2.end(), l1.front());
+        l1.pop_front();
     }
 
-    print(l2.begin(), l2.end()) << endl;
+    print(l2.begin(), l2.end()) << ":" << l2.size() << endl;
 
     return 0;
 }
