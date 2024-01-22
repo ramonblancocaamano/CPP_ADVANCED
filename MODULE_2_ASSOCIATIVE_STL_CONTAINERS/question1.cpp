@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    int mynumbers[] = {2, 9, 0, 2, 1, 4, 5};
+    int mynumbers[] = {3, 9, 0, 2, 1, 4, 5};
 
     string words[] = {"three", "nine", "zero", "two", "one", "four", "five"};
 
