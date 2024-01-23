@@ -1,16 +1,19 @@
 #include <iostream>
 #include <map>
+#include <sstream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
 int main() {
-    int mynumbers[] = {3, 9, 0, 2, 1, 4, 5};
+    int mynumbers[] = {3, 9, 0, 2, 1, 4, 5, 8};
 
-    string words[] = {"three", "nine", "zero", "two", "one", "four", "five"};
-    multimap<int, string> m;
+    vector<int> v(mynumbers, mynumbers + 7);
+    map<int, string> m;
 
-    for (multiset<int>::iterator i = s1.begin(); i != s1.end(); i++) {
-        cout << *i << ", ";
+    for (map<int, string>::iterator i = m.begin(); i != m.end(); i++) {
+        cout << *i << ", ";  // LINE I
     }
 
     return 0;
