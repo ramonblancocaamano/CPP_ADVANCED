@@ -25,7 +25,7 @@ int main() {
     vector<A> v(mynumbers, mynumbers + 7);
     vector<A>::iterator it;
 
-    /* LINI I */
+    /* LINE I */
     while ((it = adjacent_find(it, v.end(), compare)) != v.end()) {
         cout << it - v.begin() << ", ";
         it++;  // LINE II

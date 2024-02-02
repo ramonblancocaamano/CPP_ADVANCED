@@ -19,8 +19,7 @@ int main() {
 
     vector<int> v1(mynumbers, mynumbers + 7);
 
-    if() {
-
+    if () {
     } else {
         cout << "Not found!n";
     }
