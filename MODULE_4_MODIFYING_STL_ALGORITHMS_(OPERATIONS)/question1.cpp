@@ -4,7 +4,9 @@
 
 using namespace std;
 
-void print(int v) { cout << v << ", "; }
+void print(int v) {
+    cout << v << ", ";  //
+}
 
 struct Sequence {
     int start;

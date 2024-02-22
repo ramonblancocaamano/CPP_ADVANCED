@@ -10,18 +10,24 @@ struct Out {
 
     Out(ostream &o) : out(o) {}
 
-    void operator()(const T &val) { out << val << ", "; }
+    void operator()(const T &val) {
+        out << val << ", ";  //
+    }
 };
 
 struct Sequence {
     int start;
 
     Sequence(int start) : start(start) {}
-    int operator()() { return start++ % 7; }
+    int operator()() {
+        return start++ % 7;  //
+    }
 };
 
 struct Odd {
-    bool operator()(int v) { return v % 2 == 0; }
+    bool operator()(int v) {
+        return v % 2 == 0;  //
+    }
 };
 
 int main() {
