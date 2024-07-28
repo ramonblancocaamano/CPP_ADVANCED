@@ -23,17 +23,6 @@ struct Sequence {
     }
 };
 
-struct sequence {
-    int val, inc;
-
-   public:
-    sequence(int s, int i) : val(s), inc(i) {}
-    operator int() const {  // LINE I
-        int r = val;
-        return r;
-    }
-};
-
 int main() {
     vector<int> v1(4);
 

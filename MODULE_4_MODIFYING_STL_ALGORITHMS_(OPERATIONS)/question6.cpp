@@ -28,9 +28,10 @@ int main() {
     vector<int> v1(4);
     vector<int> v2(4);
 
-    generate(v1.begin(), v1.end(), Sequence(10));   // LINE I
+    generate(v1.begin(), v1.end(), Sequence(10));  // LINE I
     sort(v1.rbegin(), v1.rend());
-    stable_partition(v1.begin(), v1.begin(), Odd());  // LINE II
+    unique_copy(v1.begin(), v1.begin(), v2.begin());  // LINE II
+    for_each(v2.begin(), v2.end(), Out<int>(cout));
     for_each(v1.begin(), v1.end(), Out<int>(cout));
 
     return 0;

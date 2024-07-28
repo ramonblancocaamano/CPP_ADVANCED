@@ -15,12 +15,12 @@ bool classifier(int v) {
 
 int main() {
     int mynumbers[] = {3, 9, 0, 2, 1, 4, 5};
-    
+
     vector<int> v1(mynumbers, mynumbers + 7);
     set<int> s1(mynumbers, mynumbers + 7);
 
-    replace_if(v1.begin(), v1.end(), classifier, 7);           // LINE I
-    for_each(v1.begin(), v1.end(), printer); // LINE II
+    replace_if(v1.begin(), v1.end(), classifier, 7);  // LINE I
+    for_each(v1.begin(), v1.end(), printer);          // LINE II
 
     return 0;
 }

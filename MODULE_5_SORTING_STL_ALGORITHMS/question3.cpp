@@ -1,5 +1,7 @@
 #include <algorithm>
+#include <functional>
 #include <iostream>
+#include <set>
 #include <vector>
 
 using namespace std;
@@ -12,8 +14,8 @@ int main() {
     int mynumbers[] = {3, 9, 0, 2, 1, 4, 5};
     vector<int> v1(mynumbers, mynumbers + 7);
 
-    copy_backward(mynumbers, mynumbers + 7, v1.rend());  // LINE I
-    for_each(v1.begin(), v1.end(), printer);             // LINE II
+    sort(v1.begin(), v1.end(), greater<int>());  // LINE I
+    for_each(v1.begin(), v1.end(), printer);     // LINE II
 
     return 0;
 }
