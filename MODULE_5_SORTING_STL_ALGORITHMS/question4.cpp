@@ -24,7 +24,7 @@ ostream& operator<<(ostream& stream, const Pocket& pocket) {
     return stream;
 }
 
-void printer(Pocke i) {
+void printer(Pocket i) {
     cout << i << ", ";  //
 }
 

@@ -2,32 +2,8 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: clang compilar archivo activo",
-            "command": "/usr/bin/clang",
-            "args": [
-                "-fcolor-diagnostics",
-                "-fansi-escape-codes",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Tarea generada por el depurador."
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: g++-12 compilar archivo activo",
-            "command": "/opt/homebrew/bin/g++-12",
+            "label": "C/C++: g++ compilar archivo activo",
+            "command": "/opt/homebrew/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
