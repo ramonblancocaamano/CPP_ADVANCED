@@ -27,13 +27,10 @@ ostream &operator<<(ostream &stream, const Pocket &pocket) {
 
 int main() {
     Pocket mynumbers1[] = {3, 9, 0, 2};
-
     int mynumbers2[] = {6, 1, 4, 2};
-
     vector<Pocket> v1(7, 0);
 
     sort(mynumbers2, mynumbers2 + 4);
-
     sort(mynumbers1, mynumbers1 + 4);
 
     set_symmetric_difference(mynumbers1, mynumbers1 + 3, mynumbers2,
