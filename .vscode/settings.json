@@ -22,5 +22,6 @@
         "unordered_map": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "svn.ignoreMissingSvnWarning": true
+    "svn.ignoreMissingSvnWarning": true,
+    "terminal.integrated.defaultProfile.windows": "Ubuntu"
 }

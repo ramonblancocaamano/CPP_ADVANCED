@@ -1,9 +1,26 @@
 {
+    "version": "2.0.0",
     "tasks": [
+        {
+            "label": "Compilar C/C++",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila el archivo C/C++ actual"
+        },
         {
             "type": "cppbuild",
             "label": "C/C++: g++ compilar archivo activo",
-            "command": "/opt/homebrew/bin/g++",
+            "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -17,9 +34,11 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "Tarea generada por el depurador."
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
